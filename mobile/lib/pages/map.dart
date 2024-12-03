@@ -111,10 +111,10 @@ class _MapPageState extends State<MapPage> {
       if (response.statusCode == 200) {
         final data = jsonDecode(response.body);
         if (data != null && data is List && data.isNotEmpty) {
-          final unidade = data[0];
+          final unidade = data[0].name;
           ScaffoldMessenger.of(context).showSnackBar(
             SnackBar(
-              content: Text('Bem vindo à PUC Minas unidade $unidade'),
+              content: Text('Bem vindo à $unidade'),
               duration: const Duration(seconds: 5),
             ),
           );
