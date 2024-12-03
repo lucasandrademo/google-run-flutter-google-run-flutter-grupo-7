@@ -104,7 +104,7 @@ class _MapPageState extends State<MapPage> {
 
   Future<void> _makeRequest(LatLng location) async {
     final url =
-        'https://us-central1-civil-sentry-443022-r3.cloudfunctions.net/calculaDistanciaPuc?lat=${location.latitude}&long=${location.longitude}';
+        'https://southamerica-east1-dev-distr.cloudfunctions.net/gps-puc/getNearbyPucMinas?lat=${location.latitude}&long=${location.longitude}';
     try {
       final response = await http.get(Uri.parse(url));
 
